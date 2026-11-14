@@ -146,7 +146,8 @@ export default function Inicio() {
                 Anterior
               </button>
               <span aria-live="polite">
-                Página {datos.total_pages ? pagina : 0} de {datos.total_pages}
+                {/* TMDB puede informar una página aunque la búsqueda esté vacía. */}
+                Página {datos.results.length ? pagina : 0} de {datos.results.length ? datos.total_pages : 0}
               </span>
               <button
                 className="secondary"
