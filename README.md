@@ -2,6 +2,8 @@
 
 SPA con React, JavaScript, React Router, `fetch` y CSS. La consigna de TMDB pide una SPA y no especifica un framework; se eligió React para reutilizar los conceptos de los TP previos. Vite sirve el proyecto y genera la versión de producción.
 
+Web pública: https://tpf-tmdb-nicoetchegoyen.netlify.app/
+
 ## Empezar a practicar
 
 Con Node.js 22.12 o posterior, desde esta carpeta:
@@ -30,7 +32,7 @@ Fuente: `Trabajo Práctico SPA - TMDB.pdf`, dos páginas. Enumera cinco bloques 
 
 | Criterio de aceptación | Implementación | Verificación / pendiente |
 | --- | --- | --- |
-| Grilla de películas populares al inicio | `Inicio.jsx`, GET `/movie/popular` | API real: páginas 1 y 2, 20 resultados por página; interfaz real pendiente de comprobación |
+| Grilla de películas populares al inicio | `Inicio.jsx`, GET `/movie/popular` | API real: páginas 1 y 2, 20 resultados por página; interfaz real comprobada |
 | Tarjeta con póster y título | `Poster.jsx` y tarjetas con enlaces | Pósters reales presentes en la API; fallback si falta o falla la imagen |
 | Grilla responsive | Grid CSS: 4, 3 o 2 columnas | Revisiones indicadas en `VERIFICACION.md` del directorio superior |
 | Controles debajo de la grilla | `nav.pagination` | Probado |
@@ -45,7 +47,7 @@ Fuente: `Trabajo Práctico SPA - TMDB.pdf`, dos páginas. Enumera cinco bloques 
 | Título, póster, sinopsis, estreno y calificación | `Detalle.jsx`, GET `/movie/:id` | API real: Batman Begins incluye los cinco campos requeridos |
 | Enlace para ver trailers | Ruta `#/peliculas/:id/trailers` | Probado |
 | Página separada de trailers | `Detalle` con `mostrarTrailers` | Probado el estado sin videos; hay alternativa de inglés si no hay español |
-| Reproducción por iframe YouTube | GET `/movie/:id/videos`, filtro YouTube/Trailer e iframe por video | API real: tres trailers de YouTube en inglés para Batman Begins; reproducción pendiente de navegador |
+| Reproducción por iframe YouTube | GET `/movie/:id/videos`, filtro YouTube/Trailer e iframe por video | API real: tres trailers de YouTube en inglés para Batman Begins; reproducción local comprobada; reproductores disponibles en producción |
 
 TMDB limita las consultas a la página 500 aunque informe más páginas. Se muestra el total que devuelve la API, se explica ese límite y no se permite consultar la 501. Una búsqueda sin resultados muestra “Página 0 de 0”.
 
@@ -53,7 +55,7 @@ La práctica no asocia un trailer real a una película inventada: muestra el est
 
 ## Publicar en Netlify
 
-Repositorio previsto: https://github.com/nicoetchegoyen/TPF-TMDB-React. La URL final se registra en `DESPLIEGUE.md` después de comprobar el sitio.
+Repositorio previsto: https://github.com/nicoetchegoyen/TPF-TMDB-React. Web publicada y comprobada: https://tpf-tmdb-nicoetchegoyen.netlify.app/
 
 1. Importar el repositorio desde GitHub.
 2. `netlify.toml` fija build `npm run build`, directorio `dist`, Node 24 y funciones en `netlify/functions`.

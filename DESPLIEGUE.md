@@ -31,9 +31,16 @@ Abrir populares, pasar de página, buscar con Enter y botón, paginar búsqueda,
 Para repetir las consultas reales a la web publicada en PowerShell:
 
 ```powershell
-$env:TMDB_SITE = 'URL_PUBLICA_DEL_SITIO'
+$env:TMDB_SITE = 'https://tpf-tmdb-nicoetchegoyen.netlify.app/'
 npm run probar:api
 Remove-Item Env:TMDB_SITE
 ```
 
 Para practicar con la API real en tu computadora: `npm run dev`. El comando `preview` sólo sirve archivos estáticos y no ejecuta la función.
+
+
+## Publicado el 14/11/2026
+
+URL: https://tpf-tmdb-nicoetchegoyen.netlify.app/
+
+Netlify publicó el commit a59a06a con una función de servidor. TMDB_TOKEN se guardó como secreto con autorización del titular. Las consultas de producción devolvieron HTTP 200: populares y búsqueda en dos páginas, búsqueda vacía, ficha de Batman Begins y tres trailers. Se comprobaron navegación a página 2, búsqueda por Enter, detalle, recarga directa y página de trailers. Los archivos JS/CSS públicos no contienen el token real; las rutas ajenas devuelven 400 y POST devuelve 405.
