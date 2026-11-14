@@ -18,7 +18,7 @@ Los títulos, popularidad, puntuaciones y cantidades pueden cambiar en TMDB.
 
 ## Interfaz local
 
-Se abrió la aplicación sin modo de práctica: populares con imágenes reales, búsqueda por Enter de Batman Begins, detalle completo y página separada con tres reproductores. Se inició el primer trailer dentro del iframe y se observó el tiempo transcurrido avanzar hasta 11 segundos.
+Se abrió la aplicación sin modo de práctica: populares con imágenes reales, búsqueda por Enter de Batman Begins, detalle completo y página separada con tres reproductores. Se inició el primer trailer dentro del iframe y se observó el tiempo transcurrido avanzar hasta 11 segundos. Se verificaron populares página 2, búsqueda Batman por Enter reiniciando a 1, búsqueda página 2 conservada en URL, búsqueda vacía mediante botón y controles deshabilitados. TMDB devolvió total_pages=1 sin películas: se corrigió el contador para mostrar Página 0 de 0 y se comprobó en la interfaz.
 
 ## Código y credencial
 
