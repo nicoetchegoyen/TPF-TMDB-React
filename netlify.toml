@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+  VITE_DEMO_MODE = "false"
+  VITE_REPO_URL = "https://github.com/nicoetchegoyen/TPF-TMDB-React"
+
+[functions]
+  directory = "netlify/functions"
